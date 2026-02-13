@@ -12,7 +12,7 @@ USD1 micropayments on Solana for machine-to-machine commerce.
 
 ## The Problem
 
-Autonomous systems (drones, robots, IoT devices) need to make **millions of micropayments** without human intervention:
+Autonomous systems (drones, robots, IoT devices) need to make **billions of micropayments** without human intervention:
 - Airspace access fees
 - Real-time data purchases
 - Charging station payments
