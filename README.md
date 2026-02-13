@@ -80,12 +80,43 @@ Press **Start Flight** (or spacebar) to begin.
 - **Frontend:** Vanilla JS + CSS
 - **Backend:** Python/Flask + solana-py
 
+## SDK
+
+Install the PayLoad SDK for Python:
+
+```bash
+pip install payload-sdk
+```
+
+```python
+from payload_sdk import Wallet, PayLoadClient
+
+wallet = Wallet.from_env("PAYLOAD_PRIVATE_KEY")
+client = PayLoadClient(wallet)
+
+# Make an autonomous payment
+result = client.pay(
+    amount=0.003,
+    recipient="...",
+    memo="Airspace fee"
+)
+```
+
+See [`/sdk`](./sdk) for full documentation.
+
+## Demo Wallet
+
+**Address:** `BiWAQV7HX4VhB19gEq3mQ44xdZmnVkSDVTsBJJ5TrhUX`
+
+[View on Solana Explorer](https://explorer.solana.com/address/BiWAQV7HX4VhB19gEq3mQ44xdZmnVkSDVTsBJJ5TrhUX?cluster=devnet)
+
 ## Roadmap
 
 - [x] Interactive demo
+- [x] PayLoad SDK (Python)
+- [x] Demo wallet on Solana Devnet
 - [ ] Real Solana devnet transactions
 - [ ] USD1 mainnet integration
-- [ ] Drone SDK (Python/Rust)
 - [ ] x402 protocol compliance
 - [ ] First hardware pilot
 
